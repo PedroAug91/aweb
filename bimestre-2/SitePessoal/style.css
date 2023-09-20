@@ -1,0 +1,532 @@
+@font-face {
+    font-family: W95FA;
+    src: url('assets/fonts/W95FA.otf');
+}
+
+@font-face {
+    font-family: FGLight;
+    src: url('assets/fonts/FranklinGothic-Light.ttf');
+}
+
+@font-face {
+    font-family: FGCondensed;
+    src: url('assets/fonts/FRAMDCN.ttf');
+}
+
+:root {
+    --background-color: #008080;
+    --light-gray: #c3c3c3;
+    --white: #fdffff;
+    --blue: #010081;
+    --black: #000000;
+    --header-height: 70px;
+    --hero-height: 900px;
+    --p-font-size: 20px;
+    --card-width: 400px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: W95FA;
+    color: var(--black);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    height: 29px;
+    background-color: var(--light-gray);
+    border-top: 1px solid var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* HEADER STYLING */
+
+#top-bar {
+    display: flex;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 15px;
+    align-items: center;
+}
+
+.icon {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+.icon-container span {
+    padding-top: 4px;
+    margin: 0;
+    color: var(--white);
+    text-align: center;
+}
+
+#navbar-background {
+    min-height: var(--header-height);
+    min-width: 100%;
+    background-color: var(--background-color);
+    position: sticky;
+    top: 0;
+    margin-top: var(--hero-height);
+    z-index: 2;
+}
+
+
+/* MAIN STYLING */
+
+#hero {
+    background-image: url("assets/images/hero.jpg");
+    background-size: cover;
+    height: var(--hero-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    font-family: FGCondensed;
+    flex-direction: column;
+    color: var(--black);
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.hero-heading {
+    display: flex;
+    flex-direction: column;
+}
+
+#regular {
+    font-family: FGLight;
+    font-weight: 200;
+    margin-bottom: -60px;
+}
+
+#winLogo {
+    height: 300px;
+    width: auto;
+}
+
+/* SECTIONS STYLING */
+
+.window {
+    border: outset;
+    background-color: var(--light-gray);
+    min-width: 400px;
+    margin-block: 50px;
+}
+
+.window-heading {
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue);
+    margin: 2px;
+}
+
+.window-heading h2 {
+    margin: 2px 0 2px 8px;
+    font-size: 20px;
+}
+
+.window-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 2px;
+}
+
+.window-icon {
+    background-color: var(--light-gray);
+    border: outset var(--black);
+    box-shadow: 1px;
+    margin-inline: 1px;
+}
+
+.window-content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.outset-border {
+    border: outset var(--black);
+}
+
+.menu-bar {
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar span{
+    margin: 4px 10px 1px;
+}
+
+/* SOBREMIM STYLING */
+
+#sobremim {
+    min-width: 600px;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+
+#sobremim figure {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    flex-direction: column;
+}
+
+article p{
+    margin: 30px 50px;
+    max-width: 500px;
+    font-size: var(--p-font-size);
+    text-indent: 50px;
+}
+
+#selfie-img {
+    height: 400px;
+    width: auto;
+}
+
+/* CURIOSIDADES STYLING */
+
+#curiosidades {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: var(--card-width);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.card .outset-border {
+    width: 380px;
+}
+
+.card .window-content {
+    margin: 14px 14px 0;
+    justify-content: center;
+}
+
+.card-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 !important;
+    font-size: 18px;
+}
+
+.card-figure figcaption {
+    margin-block: 15px;
+    text-align: center;
+}
+
+/* EDUCACAO STYLING */
+
+.num {
+    min-width: 30px;
+    text-align: center;
+    width: 40px;
+}
+
+.letters {
+    min-width: 70px;
+}
+
+th, td{
+    border: 1px solid var(--light-gray);
+    min-width: 30px;
+    text-align: center;
+    background-color: var(--white);
+    border-spacing: 0;
+}
+
+.num, .letters {
+    border: outset var(--white);
+    background-color: var(--light-gray);
+    height: 40px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.num {
+    width: 50px;
+}
+
+td {
+    font-size: 20px;
+    padding-inline: 20px;
+}
+
+/*CAUSOS STYLING*/
+
+#causos {
+    min-width: 600px;
+}
+
+#causos .window-content {
+    justify-content: center;
+    background-color: var(--white);
+    border: inset ;
+    margin: 4px;
+}
+
+
+/* HABILIDADES */
+
+#habilidades {
+    min-height: 500px;
+}
+
+#habilidades .window-content{
+    border: inset 2px var(--black);
+    background-color: var(--white);
+    margin: 4px;
+    min-height: 440px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#habilidades .window-content span {
+    color: var(--black);
+}
+
+#habilidades .window-content .icon-container {
+    margin-top: 10px;
+}
+
+/* FOOTER STYLING*/
+
+#start-menu {
+    border: outset;
+    box-shadow: 1px;
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    margin-left: 8px;
+}
+
+#menu-a {
+    display: flex;
+    align-items: center;
+}
+
+#start-menu img {
+    height: 14px;
+    width: auto;
+    object-fit: contain;
+}
+
+#start-menu img, span {
+    margin-inline: 3px;
+}
+
+#contato span{
+    margin-right: 8px;
+    border: inset;
+    padding-inline: 3px;
+}
+
+#contato i {
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 980px){
+    /* TAGS */
+    html {
+        scroll-padding-top: 170px;
+    }
+    /* HEADER */
+    header, #navbar-background {
+        height: 170px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #top-bar {
+        margin-top: 20px;
+    }
+
+    .icon-container {
+        margin-inline: 30px;
+        font-size: 24px;
+    }
+    .icon {
+        height: 80px;
+    }
+
+    #navbar-background {
+        margin-top: 1700px;
+    }
+
+    /* HERO */
+
+    #hero {
+        height: 1700px;
+        font-size: 120px;
+    }
+
+    #winLogo {
+        height: 530px;
+    }
+
+    /* SECTIONS */
+
+    .window {
+        border: outset 4px;
+        margin-inline: 20px;
+    }    
+
+    .window-heading {
+        height: 50px;
+    }
+
+    .window-heading h2 {
+        font-size: 30px;
+    }
+
+    .window-icons {
+        margin-right: 10px;
+    }
+
+    .window-icon {
+        height: 24px;
+        margin-inline: 5px;
+        border: outset 4px;
+    }
+
+    .outset-border {
+        border: outset 4px var(--black);
+    }
+
+    .window-content {
+        margin-block: 30px;
+    }
+
+    /* SOBREMIM */
+
+    #sobremim {
+        margin-inline: 30px;
+        height: auto;
+    }
+
+    #sobremim p {
+        margin-block: 20px;
+        font-size: 30px;
+    }
+
+    #selfie-img {
+        height: 600px;
+    }
+
+    /* CURIOSIDADES */
+
+    .card {
+        width: 750px;
+        height: auto;
+    }
+
+    .card-figure {
+        width: 100%;
+    }
+
+    .card-figure img {
+        min-width: 700px;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .card-figure figcaption {
+        margin: 30px 20px 45px;
+        text-align: center;
+        font-size: 44px;
+    }
+
+    /* EDUCACAO */
+
+    td {
+        font-size: 30px;
+    }
+
+    /* CAUSOS */
+
+    #causos p {
+        margin: 10px 0;
+        font-size: 30px;
+    }
+
+    #causos .window-content {
+        margin: 4px;
+    }
+
+    /* HABILIDADES */
+
+    #habilidades {
+        margin-inline: 30px;
+    }
+
+    #habilidades .window-content {
+        height: 86%;
+    }
+
+    /* FOOTER */
+
+    footer {
+        height: 170px;
+        justify-content: space-around;
+        font-size: 24px;
+    }
+
+    #start-menu {
+        height: 70px;
+        margin-inline: 0;
+    }
+
+    #menu-a img{
+        height: 70px;
+        width: auto;
+    }
+}
